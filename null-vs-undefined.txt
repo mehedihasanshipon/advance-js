@@ -1,0 +1,67 @@
+In JavaScript, undefined is a type, whereas null an object.
+undefined
+It means a variable declared, but no value has been assigned a value.
+For example,
+var demo;
+alert(demo); //shows undefined
+alert(typeof demo); //shows undefined
+null
+
+Whereas, null in JavaScript is an assignment value. You can assign it to a variable.
+For example,
+var demo = null;
+alert(demo); //shows null
+alert(typeof demo); //shows object
+
+What is the difference between Null and Undefined JavaScript?
+
+Null means object value is absent, intentionally. Null expresses lack of identification, indicating that a variable points to no object.
+In simpler terms, we can say that it is a keyword which signifies ‘no value’ or nonexistence of any value.
+It cannot be used as an identifier for any global object property, like in case of undefined. It is treated as falsy for boolean operations.
+var nullVariable = null;
+console.log(nullVariable);
+Output ->
+null
+Null VS Undefined
+Value Assignment
+A variable is said to be undefined if it has been declared, but no value has been assigned to it. Where as, null is a value that can be assigned to a variable and it represents ‘no value’.
+JavaScript sets unassigned variables with a default value of undefined. It never sets a value to null. It is used by programmers to indicate that a var has no value.
+undefined is not valid in JSON while null is.
+Primitive type Conversion
+In case of arithmetic conversion on NULL, the value determined will be 0.
+var sum = 111 + null;
+console.log(sum)
+Output --> 111
+However in case of undefined, no arithmetic conversion takes place. If we add anything to undefined, result will be NaN or Not-a-Number.
+var sum = 111 + undefined;
+console.log(sum)
+Output -> NaN
+Few examples to demonstrate the differences.
+console.log(typeof null);
+console.log(typeof undefined);    
+console.log(null === undefined);   
+console.log(null  == undefined); 
+console.log(null === null);       
+console.log(null == null);       
+console.log(!null);                
+console.log(isNaN(1 + null));     
+console.log(isNaN(1 + undefined));
+Output -> 
+object
+undefined
+false
+true
+true
+true
+true
+false
+true
+Image for post
+
+Conclusion
+Null is one of JavaScript’s primitive values.
+Null is an object with a valid value, no properties, is non-mutable, and only a single instance of the same exists in the system at all times.
+The data type of null is an object, where as undefined is of type undefined.
+null !== undefined but null == undefined.
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/nulls
